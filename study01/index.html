@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+</head>
+<body style="height: 2000px;">
+    <div class="holder">
+        <canvas id='day' width='150px'></canvas>
+        </div>
+        
+    <script>
+        var options ={
+              animation : true,
+            animationEasing : "easeOutSine",
+            percentageInnerCutout: 60,
+            segmentShowStroke : false
+        }
+        
+        /*var data = {
+            labels: [
+                "Red",
+                "Blue",
+                "Yellow"
+            ],
+            datasets: [
+                {
+                    data: [60, 15, 15],
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ],
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ]
+                }]
+        };*/
+         var  data = [
+            {
+                value: 60,
+                color:"rgb(126,179,72)",
+            backgroundColor: 'red'
+            },
+          {
+                value: 15,
+                color:"coral",
+            backgroundColor: 'rgba(126,179,72,0.6)'
+            },
+            {
+                value : 15,
+                color : "rgba(126,179,72,0.6)"
+            }
+          ];
+          
+        var dayObject = new Chart($("#day").get(0).getContext("2d")).Doughnut(data,options);
+        //dayObject;
+        
+        
+</script>
+</body>
+</html>
