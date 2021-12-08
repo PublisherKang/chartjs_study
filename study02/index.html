@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <style>
+        .chart{width: 400px; height: 400px;}
+    </style>
+</head>
+<body>
+    <div class="chart">
+        <canvas id="myChart" width="400px" height="400px"></canvas>
+    </div>
+    <script>
+        const ctx = $('#myChart');
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: '',
+                    data: [25, 5, 10, 20, 5, 5, 20, 8, 2],
+                    backgroundColor: [
+                        '#ff427c',
+                        '#ff6ea6',
+                        '#c65bb9',
+                        '#910cc0',
+                        '#9b47e6',
+                        '#7938e6',
+                        '#3631b7',
+                        '#367ce2',
+                        '#008bc5',
+
+                    ],
+                    borderRadius: [
+                        14
+                    ],
+                }]
+            },
+        });
+
+    </script>
+</body>
+</html>
